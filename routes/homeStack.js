@@ -9,7 +9,7 @@ const screens = {
         screen: SignIn
     },
     SignUp: {
-        screen: SignUp 
+        screen: SignUp
     },
 }
 const HomeStack = createStackNavigator(screens);

@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, TouchableOpacity} from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 
 const SignButton = (props) => {
-    return(
-        <TouchableOpacity
-        style = {styles.buttonBody}
-        onPress = {props.onPress}>
-        <Text style = {styles.buttonText}>{props.children}</Text>
-        </TouchableOpacity>
-    )
+  return (
+    <TouchableOpacity
+      style={styles.buttonBody}
+      onPress={props.onPress}>
+      <Text style={styles.buttonText}>{props.children}</Text>
+    </TouchableOpacity>
+  )
 }
 
 export { SignButton };
@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 30,
-    marginTop: "25%"
   },
   buttonText: {
     color: "white",

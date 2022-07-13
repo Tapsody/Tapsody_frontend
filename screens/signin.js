@@ -2,37 +2,39 @@ import React, { useState } from "react";
 import { ImageBackground, StyleSheet, Text, View, TextInput, SafeAreaView, TouchableOpacity } from "react-native";
 import { SignButton } from "../components/Button"
 
-export default function SignIn({navigation}){
+export default function SignIn({ navigation }) {
   const [mail, setMail] = useState("testMail");
   const [password, setPass] = useState("testPass");
 
   const pressHandler = () => {
     navigation.navigate("SignUp");
-    }
-  return(
-    <SafeAreaView style = {[styles.container , styles.centered]}>
-        <View style = {styles.signPage}>
-          <ImageBackground 
-          source = {require('../assets/sign-background.png')} 
-          style = {[styles.image, styles.centered]}>
-            <View style = {[styles.inputBody, styles.centered]}>
-              <Text style = {{color: "white", fontSize: 30}}>Please Sign In</Text>
-              <TextInput 
-                  style = {styles.input}
-                  placeholder = "Your email"
-                  onChangeText = {(val) => setMail(val)}/>
-              <TextInput 
-                  style = {styles.input}
-                  placeholder = "Your password"
-                  onChangeText = {(val) => setPass(val)}/>
-                  <SignButton>Sign in</SignButton>
-            </View>
-            <Text style = {{color: "rgba(255, 255, 255, 0.6)"}}>Don't have an account?</Text> 
-            <TouchableOpacity>
-                <Text style = {{color: "white"}} onPress = {pressHandler}>Sign up</Text>
-            </TouchableOpacity>
-          </ImageBackground>
-        </View>
+  }
+
+  return (
+    <SafeAreaView style={[styles.container, styles.centered]}>
+      <View style={styles.signPage}>
+        <ImageBackground
+          source={require('../assets/sign-background.png')}
+          style={[styles.image, styles.centered]}>
+          <View style={[styles.inputBody, styles.centered]}>
+            <Text style={{ color: "white", fontSize: 30 }}>Please Sign Up</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Your email"
+              onChangeText={(val) => setMail(val)} />
+            <TextInput
+              style={styles.input}
+              placeholder="Your password"
+              onChangeText={(val) => setPass(val)} />
+
+          </View>
+          <SignButton>Sign in</SignButton>
+          <Text style={{ color: "rgba(255, 255, 255, 0.6)" }}>Don't have an account?</Text>
+          <TouchableOpacity>
+            <Text style={{ color: "white" }} onPress={pressHandler}>Sign Up</Text>
+          </TouchableOpacity>
+        </ImageBackground>
+      </View>
     </SafeAreaView>
   );
 }
@@ -51,7 +53,7 @@ const styles = StyleSheet.create({
     height: "10%",
     color: "white",
     padding: 8,
-    margin: 20,
+    margin: 10,
     backgroundColor: "rgba(255, 255, 255, 0.15)",
     borderRadius: 10
   },
@@ -62,11 +64,10 @@ const styles = StyleSheet.create({
   inputBody: {
     width: "80%",
     height: "70%",
-    top: "10%",
     marginBottom: "5%"
   },
   centered: {
     justifyContent: "center",
-    alignItems: "center",   
-  } 
+    alignItems: "center",
+  }
 });

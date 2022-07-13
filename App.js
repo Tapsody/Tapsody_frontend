@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { ImageBackground, StyleSheet, Text, View, TextInput, SafeAreaView } from "react-native";
-import  Navigator  from "./routes/homeStack"
+import Navigator from "./routes/homeStack"
+import { Testing } from "./components/test"
 
-export default function App(){
-  const [mail, setMail] = useState("testMail");
-  const [password, setPass] = useState("testPass");
-
-  return(
+export default function App() {
+  return (
+    // <Testing>
+    //   <Text>Hello sir</Text>
+    //   <Text>Second test</Text>
+    // </Testing>
     <Navigator />
   );
 }
