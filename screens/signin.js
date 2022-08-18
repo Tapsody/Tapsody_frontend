@@ -17,7 +17,7 @@ export default function SignIn({ navigation }) {
           source={require('../assets/sign-background.png')}
           style={[styles.image, styles.centered]}>
           <View style={[styles.inputBody, styles.centered]}>
-            <Text style={{ color: "white", fontSize: 30 }}>Please Sign Up</Text>
+            <Text style={{ color: "white", fontSize: 30 }}>Please Sign In</Text>
             <TextInput
               style={styles.input}
               placeholder="Your email"
@@ -26,7 +26,6 @@ export default function SignIn({ navigation }) {
               style={styles.input}
               placeholder="Your password"
               onChangeText={(val) => setPass(val)} />
-
           </View>
           <SignButton>Sign in</SignButton>
           <Text style={{ color: "rgba(255, 255, 255, 0.6)" }}>Don't have an account?</Text>

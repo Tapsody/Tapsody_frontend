@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import { ImageBackground, StyleSheet, Text, View, TextInput, SafeAreaView } from "react-native";
+import React from "react";
 import Navigator from "./routes/homeStack"
-import { Testing } from "./components/test"
+import { NFTSettings } from "./screens/nftsettings"
 
 export default function App() {
-  return (
-    // <Testing>
-    //   <Text>Hello sir</Text>
-    //   <Text>Second test</Text>
-    // </Testing>
-    <Navigator />
-  );
+  
+
+
+    return (
+        <NFTSettings></NFTSettings>
+    );
+    
 }
 
+
+  
